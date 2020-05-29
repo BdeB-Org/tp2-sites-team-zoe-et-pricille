@@ -23,6 +23,7 @@
 
     <div id="insert">
         <h3>Insertion des nouveaux clients</h3>
+        <p>
         <label for="num_client">Numéro du client (8 caractères maximum):</label>
         <input
           type="text"
@@ -33,6 +34,8 @@
           maxlength="8"
           size="9"
         />
+      </p>
+      <p>
         <label for="nom_client">Nom du client (50 caractères maximum):</label>
         <input
           type="text"
@@ -43,6 +46,8 @@
           maxlength="50"
           size="30"
         />
+      </p>
+      <p>
         <label for="mode_paiement">Mode de paiement des achats (15 caractères maximum):</label>
         <input
           type="text"
@@ -53,6 +58,7 @@
           maxlength="15"
           size="16"
         />
+      </p>
         <input id="clickMe" type="button" value="Insérer" onclick="ins_client();" />
       </div>
       <script src="script_ins_client.js"></script>
