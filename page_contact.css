@@ -1,0 +1,22 @@
+#social img {
+    width: 100px;
+}
+
+#social li {
+    display: inline-block;
+    overflow: auto;
+    padding: 100px;
+    padding-top: 12%;
+    padding-left: 35px;
+}
+
+#social ul {
+    text-align: center;
+}
+
+#tel li {
+    text-align: center;
+    padding-top: 0px;
+    font-family: MV Boli;
+    font-size: 20px;
+}

@@ -1,0 +1,66 @@
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #affichage {
+    color: #000000;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body{
+    background-color:#ffffff;
+  }
+
+  a {
+	font-weight: 100;
+	color: #293062;
+	text-align: center;
+  }
+  
+  h1{
+      color: #000000;
+      text-align: center;
+  }
+
+  h3{
+    color: #B0C4DE;
+    text-align: center;
+   }
+
+  h2{
+    background-color:#B0C4DE;
+  }
+
+  #Accueil{
+    color: #000000;
+    background-color: #F0FFFF;
+  }
+  
+  p {
+    text-align: justify;
+    margin-left: 100px; 
+	margin-right: 100px; 
+  }
+  
+  .card {
+    margin: 1rem;
+    border: 1px solid gray;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .card {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .card {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  }
+  

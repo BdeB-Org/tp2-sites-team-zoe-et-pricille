@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insertion d'un produit</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
+      rel="stylesheet"
+    />
+    <link href="code_css.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <h1 align="center"> Nos produits, votre satisfaction </h1>
+      <h1 align="center"> (NPVS)</h2>
+      <h2>
+        <table align="center" width="800" >
+            <tr>
+               <th><a href="page_accueil.html" title="Présentation de vos produits">Accueil </th>
+               <th id="Accueil">Produits</th>
+               <th><a href="page_achat.html" title="Achats en ligne">Achats</th>
+               <th><a href="page_contact.html" title="Nous contacter?">Nous joindre</th>
+            </tr>
+        </table>
+    </h2>
+
+    <div id="insert">
+      <h3>Insertion des nouveaux produits</h3>
+      <label for="id_produit">Numéro du produit (8 caractères maximum):</label>
+      <input
+        type="text"
+        id="id_produit"
+        name="id_produit"
+        required
+        minlength="2"
+        maxlength="8"
+        size="9"
+      />
+      <label for="marque">Marque du produit (20 caractères maximum):</label>
+      <input
+        type="text"
+        id="marque"
+        name="marque"
+        required
+        minlength="2"
+        maxlength="20"
+        size="21"
+      />
+      <label for="prix">prix du produit (5 caractères maximum):</label>
+      <input
+        type="text"
+        id="prix"
+        name="prix"
+        required
+        minlength="2"
+        maxlength="5"
+        size="5"
+      />
+      <input id="clickMe" type="button" value="Insérer" onclick="ins_prod();" />
+    </div>
+    <script src="script_ins_prod.js"></script>
+
+    <a href="page_produit.html" title="page précédante"><strong>Retour</strong></a>
+  </body>
+</html>

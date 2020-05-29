@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGE ACHAT</title>
+
+    <link href="code_css.css" rel="stylesheet" />
+  </head>
+  <body>
+      <h1 align="center"> Nos produits, votre satisfaction </h1>
+      <h1 align="center"> (NPVS)</h2>
+      <h2>
+        <table align="center" width="800" >
+            <tr>
+                <th><a href="page_accueil.html" title="Présentation de vos produits">Accueil </th>
+               <th><a href="page_produit.html" title="Produits disponibles">Produits</th>
+               <th id="Accueil">Achats</th>
+               <th><a href="page_contact.html" title="Nous contacter?">Nous joindre</th>
+            </tr>
+        </table>
+    </h2>
+
+    <div id="insert">
+        <h3>Insertion des nouveaux clients</h3>
+        <label for="num_client">Numéro du client (8 caractères maximum):</label>
+        <input
+          type="text"
+          id="num_client"
+          name="num_client"
+          required
+          minlength="2"
+          maxlength="8"
+          size="9"
+        />
+        <label for="nom_client">Nom du client (50 caractères maximum):</label>
+        <input
+          type="text"
+          id="nom_client"
+          name="nom_client"
+          required
+          minlength="2"
+          maxlength="50"
+          size="30"
+        />
+        <label for="mode_paiement">Mode de paiement des achats (15 caractères maximum):</label>
+        <input
+          type="text"
+          id="mode_paiement"
+          name="mode_paiement"
+          required
+          minlength="2"
+          maxlength="15"
+          size="16"
+        />
+        <input id="clickMe" type="button" value="Insérer" onclick="ins_client();" />
+      </div>
+      <script src="script_ins_client.js"></script>
+
+  <a href="page_achat.html" title="Page précédante"><strong>Retour</strong></a>
+      
+  </body>
+</html>
