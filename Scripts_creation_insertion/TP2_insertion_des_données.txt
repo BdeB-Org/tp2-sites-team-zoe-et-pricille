@@ -1,0 +1,108 @@
+-- Puisque notre travail contenait plusieurs tables, nous avons décidé de nous focaliser sur cinq tables précices.
+--cela nous a permi de finir le devoir à temps.
+
+--CODE SQL POUR L'INSERTION DES DONNÉES DANS LA BASE DE DONNÉES:
+
+-- insertion des données dans la table client (Généré par ZOÉ)
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('25','Jean Marc','Visa');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('10','Marcel Laurin','Interac');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('15','Jean Leveque','Master card');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('20','Marie Anne','Visa');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('30','Marc AndrÃ©','Interac');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('35','Marc Michel','Master Card');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('40','Marcelle Kuetche','Interac');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('45','Murielle Blanche','Visa');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('50','Mamy Anie','Interac');
+Insert into CLIENT (NUM_CLIENT,NOM_CLIENT,MODE_PAIEMENT) values ('55','Anie Carole','Visa');
+
+-- insertion des données dans la table facture (Généré par ZOÉ)
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('2',to_date('20-05-04','RR-MM-DD'),null,'10');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('4',to_date('20-05-04','RR-MM-DD'),null,'10');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('6',to_date('20-05-02','RR-MM-DD'),null,'15');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('8',to_date('20-05-01','RR-MM-DD'),null,'10');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('10',to_date('20-04-24','RR-MM-DD'),null,'20');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('12',to_date('20-04-09','RR-MM-DD'),null,'20');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('14',to_date('20-05-05','RR-MM-DD'),null,'30');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('16',to_date('20-03-15','RR-MM-DD'),null,'30');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('18',to_date('20-02-24','RR-MM-DD'),null,'25');
+Insert into FACTURE (ID_FACTURE,DATE_PRODUCTION,DESCRIPTION_F,CLIENT_NUM_CLIENT) values ('20',to_date('20-04-04','RR-MM-DD'),null,'25');
+
+-- insertion des données dans la table facturation (Généré par ZOÉ)
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('50','10','2');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('50','4','4');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('50','2','8');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('10','8','4');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('100','10','1');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('60','12','1');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('70','14','9');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('80','18','18');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('30','16','19');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('20','6','17');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('60','10','3');
+Insert into FACTURATION (PRODUIT_ID_PRODUIT,FACTURE_ID_FACTURE,NBRE_PRODUITS) values ('20','4','12');
+
+-- insertion des données dans la table produit (Généré par PRICILLE)
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('10','Dynamite','100','1110');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('20','Dynamite','125','1110');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('30','Dynamite','100','1120');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('40','Dynamite','20','1140');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('90','Dynamite','20','1130');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('100','Joe fresh','25','1180');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('110','Joe fresh','30','1160');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('120','Joe fresh','28','1150');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('130','Joe fresh','33','1170');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('140','Joe fresh','40','1180');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('150','Bijouterie','20','1190');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('160','Bijouterie','40','1190');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('170','Bijouterie','70','1200');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('180','Bijouterie','50','1200');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('190','Bijouterie','20','1200');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('200','Georges','25','1210');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('210','Georges','10','1210');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('220','Georges','11','1210');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('230','Georges','15','1210');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('290','Matrixx','70','1240');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('300','Matrixx','150','1250');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('310','Matrixx','25','1240');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('320','Matrixx','150','1250');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('340','Monkeys','30','1270');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('350','Monkeys','20','1280');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('360','Monkeys','15','1280');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('370','Monkeys','28','1270');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('380','Monkeys','9','1280');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('390','Monkeys','18','1270');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('400','DÃ©coration ','25','1290');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('410','DÃ©coration ','15','1290');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('420','DÃ©coration ','55','1290');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('430','DÃ©coration ','68','1290');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('50','baie d"ourson','110','1180');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('60','baie d"ourson','100','1150');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('70','baie d"ourson','100','1160');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('80','baie d"ourson','50','1160');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('240','baie d"ourson','110','1220');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('250','baie d"ourson','95','1230');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('260','baie d"ourson','80','1230');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('270','baie d"ourson','30','1220');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('280','baie d"ourson','40','1220');
+Insert into PRODUIT (ID_PRODUIT,MARQUE,PRIX,ID_CATEGORIE) values ('330','baie d"ourson','75','1220');
+
+-- insertion des données dans la table categorie (Généré par PRICILLE)
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1110','chaussures de femmes','Accessoires de vetements ','110');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1120','Chaussures d''hommes','Accessoires de vetements','110');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1130','Sacs','Accessoires de vetements, de toutes les sortes','110');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1140','Ceintures','Accessoires de vetements, de tailles differentes','110');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1150','Chandails','Cette categorie de vetements englobe les hauts Ã  manches longues et courtes','120');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1160','Pantalons simples','Toutes les tailles, hommes et femmes','130');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1170','Pantalons jeans','Toutes les tailles, hommes et femmes','130');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1180','Culottes','Toutes les tailles, hommes et femmes','130');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1190','Bijoux de femmes',null,'150');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1200','Bijoux d''hommes',null,'150');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1210','Sous-vetements','Hommes et femmes confondus','140');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1220','Robes manches courtes','De toutes les tailles','170');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1230','Robes manches longues','De toutes les tailles','170');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1240','Pull-overs','En fonction des saisons','180');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1250','Manteaux','En fonction des saisons','180');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1260','Jupes','Pour toutes les tailles et toutes les dimensions','190');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1270','Enfants garÃ§ons','Pour les enfants de 0 Ã  14 ans et de toute taille','200');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1280','Enfants filles','Pour les enfants de 0 Ã  14 ans et de toute taille','200');
+Insert into CATEGORIE (ID_CATEGORIE,TYPE_PRODUITS,DESCRIPTION_C,ID_RAYON) values ('1290','DÃ©corations','DÃ©corations de maison, de bureau et autres','160');

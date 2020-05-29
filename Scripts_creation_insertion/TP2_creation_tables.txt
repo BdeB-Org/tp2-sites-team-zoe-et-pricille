@@ -1,0 +1,165 @@
+-- Généré par Oracle SQL Developer Data Modeler 19.4.0.350.1424
+--   à :        2020-05-21 19:25:03 EDT
+--   site :      Oracle Database 11g
+--   type :      Oracle Database 11g
+
+
+
+CREATE TABLE categorie (
+    id_categorie    NUMBER NOT NULL,
+    type_produits   VARCHAR2(25),
+    description_c     VARCHAR2(500),
+    rayon_id_rayon  NUMBER NOT NULL
+);
+
+ALTER TABLE categorie ADD CONSTRAINT categorie_pk PRIMARY KEY ( id_categorie );
+
+CREATE TABLE client (
+    num_client     NUMBER NOT NULL,
+    nom_client     VARCHAR2(50),
+    mode_paiement  VARCHAR2(50)
+);
+
+ALTER TABLE client ADD CONSTRAINT client_pk PRIMARY KEY ( num_client );
+
+CREATE TABLE entreprise (
+    id_entreprise       NUMBER NOT NULL,
+    nom_entreprise      VARCHAR2(50),
+    adresse_entreprise  VARCHAR2(50) NOT NULL,
+    description         VARCHAR2(250)
+);
+
+ALTER TABLE entreprise ADD CONSTRAINT entreprise_pk PRIMARY KEY ( id_entreprise );
+
+CREATE TABLE facturation (
+    produit_id_produit  NUMBER NOT NULL,
+    facture_id_facture  NUMBER NOT NULL,
+    nbre_produits       NUMBER
+);
+
+ALTER TABLE facturation ADD CONSTRAINT facturation_pk PRIMARY KEY ( produit_id_produit,
+                                                                    facture_id_facture );
+
+CREATE TABLE facture (
+    id_facture         NUMBER NOT NULL,
+    date_production    DATE,
+    description_f        VARCHAR2(500),
+    client_num_client  NUMBER NOT NULL
+);
+
+ALTER TABLE facture ADD CONSTRAINT facture_pk PRIMARY KEY ( id_facture );
+
+CREATE TABLE fournisseur (
+    id_fournisseur  NUMBER NOT NULL,
+    nom_f           VARCHAR2(50) NOT NULL,
+    adresse_f       VARCHAR2 
+--  ERROR: VARCHAR2 size not specified 
+     NOT NULL,
+    descrittion_f   VARCHAR2(500)
+);
+
+ALTER TABLE fournisseur ADD CONSTRAINT fournisseur_pk PRIMARY KEY ( id_fournisseur );
+
+CREATE TABLE livraison (
+    entreprise_id_entreprise    NUMBER NOT NULL,
+    fournisseur_id_fournisseur  NUMBER NOT NULL,
+    nbre_produits               NUMBER
+);
+
+ALTER TABLE livraison ADD CONSTRAINT livraison_pk PRIMARY KEY ( entreprise_id_entreprise,
+                                                                fournisseur_id_fournisseur );
+
+CREATE TABLE produit (
+    id_produit              NUMBER NOT NULL,
+    marque                  VARCHAR2(500),
+    prix                    NUMBER,
+    categorie_id_categorie  NUMBER NOT NULL
+);
+
+ALTER TABLE produit ADD CONSTRAINT produit_pk PRIMARY KEY ( id_produit );
+
+CREATE TABLE rayon (
+    id_rayon                  NUMBER NOT NULL,
+    nom                       VARCHAR2(20),
+    nbre_produits             NUMBER,
+    entreprise_id_entreprise  NUMBER NOT NULL
+);
+
+ALTER TABLE rayon ADD CONSTRAINT rayon_pk PRIMARY KEY ( id_rayon );
+
+ALTER TABLE categorie
+    ADD CONSTRAINT categorie_rayon_fk FOREIGN KEY ( rayon_id_rayon )
+        REFERENCES rayon ( id_rayon );
+
+ALTER TABLE facturation
+    ADD CONSTRAINT facturation_facture_fk FOREIGN KEY ( facture_id_facture )
+        REFERENCES facture ( id_facture );
+
+ALTER TABLE facturation
+    ADD CONSTRAINT facturation_produit_fk FOREIGN KEY ( produit_id_produit )
+        REFERENCES produit ( id_produit );
+
+ALTER TABLE facture
+    ADD CONSTRAINT facture_client_fk FOREIGN KEY ( client_num_client )
+        REFERENCES client ( num_client );
+
+ALTER TABLE livraison
+    ADD CONSTRAINT livraison_entreprise_fk FOREIGN KEY ( entreprise_id_entreprise )
+        REFERENCES entreprise ( id_entreprise );
+
+ALTER TABLE livraison
+    ADD CONSTRAINT livraison_fournisseur_fk FOREIGN KEY ( fournisseur_id_fournisseur )
+        REFERENCES fournisseur ( id_fournisseur );
+
+ALTER TABLE produit
+    ADD CONSTRAINT produit_categorie_fk FOREIGN KEY ( categorie_id_categorie )
+        REFERENCES categorie ( id_categorie );
+
+ALTER TABLE rayon
+    ADD CONSTRAINT rayon_entreprise_fk FOREIGN KEY ( entreprise_id_entreprise )
+        REFERENCES entreprise ( id_entreprise );
+
+
+
+-- Rapport récapitulatif d'Oracle SQL Developer Data Modeler : 
+-- 
+-- CREATE TABLE                             9
+-- CREATE INDEX                             0
+-- ALTER TABLE                             17
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          0
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   1
+-- WARNINGS                                 0
